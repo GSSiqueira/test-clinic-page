@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Teste</title>
-    <link rel="stylesheet" href="styles/style.css?v1.0">
+    <link rel="stylesheet" href="css/style.css?v1.0">
+    <link rel="stylesheet" href="css/medias.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
 
-<body>
+<body onresize="resized()"></body>
     <header>
-        <picture><a href="index.html"><img src="images/logo-clinica.png" alt="Logo da clinica"></a></picture>
-        <nav>
+        <div id="headerWrapper">
+            <picture><a href="index.html"><img id="header-logo" src="imgs/logo-clinica.png" alt="Logo da Brain Works"></a></picture>
+            <span id="burger" class="material-symbols-outlined" onclick="toggleMenu()">menu</span>
+        </div>
+        <nav id="navMenu">
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre Nós</a></li>
@@ -22,7 +27,7 @@
     </header>
     <main>
         <section id="welcome">
-            <h1>Nome da Clinica</h1>
+            <h1>Brain Works</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem incidunt ab dolores illum eos iusto
                 eaque assumenda nulla fugiat iure unde, pariatur ullam recusandae modi. Dolor, voluptates. Labore, eos
                 natus!</p>
@@ -30,7 +35,19 @@
             <a href="#">Saiba mais</a>
         </section>
         <section>
-            <picture><img src="images/consultorio.jpeg" alt=""></picture>
+            <picture><img src="imgs/consultorio.jpeg" alt=""></picture>
+            <div>
+                <h2>Sobre a Clinica</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, illo, veniam magnam distinctio
+                    dolorum
+                    soluta vel repellendus natus tempora iusto ea autem debitis. Dolores nihil aperiam provident,
+                    quisquam
+                    quae deserunt.</p>
+                <a href="#">Saiba mais</a>
+            </div>
+        </section>
+        <section>
+            <picture><img src="imgs/consultorio.jpeg" alt=""></picture>
             <div>
                 <h2>Mapeamento</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, illo, veniam magnam distinctio
@@ -42,19 +59,7 @@
             </div>
         </section>
         <section>
-            <picture><img src="images/consultorio.jpeg" alt=""></picture>
-            <div>
-                <h2>Mapeamento</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, illo, veniam magnam distinctio
-                    dolorum
-                    soluta vel repellendus natus tempora iusto ea autem debitis. Dolores nihil aperiam provident,
-                    quisquam
-                    quae deserunt.</p>
-                <a href="#">Saiba mais</a>
-            </div>
-        </section>
-        <section>
-            <picture><img src="images/consultorio.jpeg" alt=""></picture>
+            <picture><img src="imgs/consultorio.jpeg" alt=""></picture>
             <div>
                 <h2>Estimulaçao</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, illo, veniam magnam distinctio
@@ -66,7 +71,7 @@
             </div>
         </section>
         <section>
-            <picture><img src="images/consultorio.jpeg" alt=""></picture>
+            <picture><img src="imgs/consultorio.jpeg" alt=""></picture>
             <div>
                 <h2>TCC</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, illo, veniam magnam distinctio
@@ -89,10 +94,21 @@
             </ul>
             <div id="mapa"></div>
         </section>
+
     </main>
     <footer>
         <p>Marca Registrada Clinica 2025</p>
-    </footer>
+    </footer>    
+    <script>
+        function toggleMenu(){
+            const navMenu = document.getElementById("navMenu");
+            navMenu.style.display === "block" ? navMenu.style.display = "none" : navMenu.style.display = "block";
+        }
+
+        function resized(){
+            window.innerWidth >= 768 ? navMenu.style.display = "block" : navMenu.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>

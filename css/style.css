@@ -8,18 +8,23 @@
     --color-secondary: rgb(245, 221, 168);
     --color-background: white;
     --color-darker: rgb(207, 150, 27);
+    --color-text: black;
 }
 
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
-body{
+body,html{
+    height: 100vh;
+    width: 100vw;
     background-color: var(--color-background);
     display: flex;
     flex-direction: column;
-    font-family: var(--font-basic);    
+    font-family: var(--font-basic);  
+    color: var(--color-text);  
 }
 
 a{
@@ -35,10 +40,10 @@ h1,h2,h3{
 }
 
 h1{
-    color: var(--color-darker);
+    color: var(--color-primary);
     font-size: 2.5em;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.199);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     margin: 10px;
     padding: 5px;
 }
@@ -46,26 +51,45 @@ h1{
 header{
     margin-bottom: 3px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     padding: 20px 10px;
     background-color: var(--color-background);
     border-bottom: 1px solid var(--color-primary);
     box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.219);
     width: 100vw;
 }
-header img{
-    max-width: 200px;
+
+header #headerWrapper{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
+header #header-logo{
+    max-width: 100px;
+}
+
+header #burger{
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-right: 10px;
+}
+
+header nav{
+    display: none;
+}
 
 header ul{
+    
+    text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-flow: column nowrap;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
 }
 header li{
     margin: 10px 15px;
@@ -90,9 +114,9 @@ main{
 section{
     background-color: var(--color-secondary);
     padding: 5px;
-    margin: 5px;
+    margin: 10px 10px;
     border-radius: 15px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.199);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +132,7 @@ section img{
 }
 
 #welcome{
-    background: white url("../images/consultorio.jpeg") center center no-repeat;
+    background: white url("../imgs/consultorio.jpeg") center center no-repeat;
     background-size: cover;
     height: 40vh;
     width: 100vw;
