@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@media screen and (min-width: 992px){
+
+    .largeContainer{
+        width: 992px;
+        margin: auto;
+    }
+
+
+    header #burger{
+        display: none;
+    }
+
+    header .headerContainer{
+        flex-flow: row nowrap;
+        justify-content: center; 
+    }
+
+    header #headerWrapper{
+        width: 300px;
+    }
+
+    header nav{
+        width: 70%;
+    }
+
+    header ul{
+        flex-flow: row nowrap;
+    }
+
+
+}

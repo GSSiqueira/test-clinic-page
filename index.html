@@ -13,20 +13,22 @@
 
 <body onresize="resized()"></body>
     <header>
-        <div id="headerWrapper">
-            <picture><a href="index.html"><img id="header-logo" src="imgs/logo-clinica.png" alt="Logo da Brain Works"></a></picture>
-            <span id="burger" class="material-symbols-outlined" onclick="toggleMenu()">menu</span>
+        <div class="largeContainer headerContainer">
+            <div id="headerWrapper">
+                <picture><a href="index.html"><img id="header-logo" src="imgs/logo-clinica.png" alt="Logo da Brain Works"></a></picture>
+                <span id="burger" class="material-symbols-outlined" onclick="toggleMenu()">menu</span>
+            </div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Tratamentos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="navMenu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Tratamentos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
+    <main class="largeContainer">
         <section id="welcome">
             <h1>Brain Works</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem incidunt ab dolores illum eos iusto
@@ -87,14 +89,14 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, recusandae nihil cumque iure, eum qui
                     nemo facilis perferendis atque fugit harum laborum quas vel nulla doloribus earum, odio eaque. Ab.</p>
                 <ul id="socials">
+                    <li><a href="https://api.whatsapp.com/send/?phone=5512996729851&text&type=phone_number&app_absent=0" target="_blank"><i class="fa-brands fa-whatsapp"> </i>(12)996729851</a></li>
                     <li><a href="https://www.instagram.com/neuropsihannefailla/" target="_blank"><i class="fa-brands fa-instagram"></i>neuropsihannefailla</a></li>
-                    <li><a href="https://api.whatsapp.com/send/?phone=5512996729851&text&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"> </i>(12)996729851</a></li>
-                    <li><a href="mailto:hannefailla@gmail.com"><i class="fa-solid fa-envelope"></i>hannefailla@gmail.com</a></li>
+                    <li><a href="mailto:hannefailla@gmail.com" target="_blank"><i class="fa-solid fa-envelope" ></i>hannefailla@gmail.com</a></li>
                 </ul>
             </div>
             <div id="adress">
                 <h3>Endereço</h3>
-                <p>R. Dr. Tito Roberto Liberato, 83 - Parque Res. Aquarius, São José dos Campos/SP</p>
+                <address>R. Dr. Tito Roberto Liberato, 83 - Parque Res. Aquarius, São José dos Campos/SP</address>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.712385381215!2d-45.90748142294058!3d-23.217150049040132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc358016a5b34d%3A0x3123e322015b74a2!2sR.%20Dr.%20Tito%20Roberto%20Liberato%2C%2083%20-%20Parque%20Res.%20Aquarius%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012246-150!5e0!3m2!1sen!2sbr!4v1759163218848!5m2!1sen!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
@@ -110,7 +112,7 @@
         }
 
         function resized(){
-            window.innerWidth >= 768 ? navMenu.style.display = "block" : navMenu.style.display = "none";
+            window.innerWidth >= 992 ? navMenu.style.display = "block" : navMenu.style.display = "none";
         }
     </script>
 </body>

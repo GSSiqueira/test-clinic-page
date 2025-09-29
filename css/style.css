@@ -56,16 +56,20 @@ h1{
 }
 
 header{
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-primary);
+    box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.219);
+    width: 100%;
+}
+
+header .headerContainer{
     margin-bottom: 2px;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
-    background-color: var(--color-background);
-    border-bottom: 1px solid var(--color-primary);
-    box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.219);
-    width: 100%;
+
 }
 
 header #headerWrapper{
@@ -84,6 +88,7 @@ header #burger{
     font-size: 2em;
     color: var(--color-primary);
     margin-right: 10px;
+    cursor: pointer;
 }
 
 header nav{
@@ -112,7 +117,6 @@ main{
     display: flex;
     flex-flow: column nowrap;
     min-width: 320px;
-    max-width: 800px;
     background-color: var(--color-background);
     margin: 5px auto;
 }
@@ -161,6 +165,23 @@ section > div > a{
 
 }
 
+#welcome{
+    background: white url("../imgs/consultorio.jpeg") center center no-repeat;
+    background-size: cover;
+    height: 30vh;
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#welcome p{
+    max-width: 300px;
+}
+
 #socials{
     display: flex;
     flex-flow: column nowrap;
@@ -184,24 +205,6 @@ section > div > a{
 #adress{
     width: 100%;
 }
-
-#welcome{
-    background: white url("../imgs/consultorio.jpeg") center center no-repeat;
-    background-size: cover;
-    height: 30vh;
-    width: 100%;
-    margin: 0px;
-    border-radius: 0px;
-    padding: 0px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#welcome p{
-    max-width: 300px;
-}
-
 
 footer{
     background-color: var(--color-darker);
