@@ -5,11 +5,16 @@
     --font-basic: Poppins,Verdana,Helvetica,sans-serif;
     --font-headers: Arvo, serif;
     --color-primary: rgb(248,179,25);
-    --color-secondary: rgb(245, 221, 168);
+    --color-secondary: rgb(237, 241, 245);
     --color-background: white;
     --color-darker: rgb(207, 150, 27);
     --color-text: black;
 }
+
+/* 
+    --color-secondary: rgb(247, 234, 205);
+
+    */
 
 *{
     padding: 0px;
@@ -154,6 +159,26 @@ section > div > a{
     border-radius: 15px;
     color: white;
 
+}
+
+#socials{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    font-size: 1.2em;
+    margin-bottom: 0px;
+}
+
+#socials > li{
+    margin-bottom: 10px;
+}
+
+#socials > li > a{   
+    display: block;
+    background-color: var(--color-darker);
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
 }
 
 #adress{
