@@ -46,14 +46,6 @@ h1,h2,h3{
     font-family: var(--font-headers);
 }
 
-h1{
-    color: var(--color-primary);
-    font-size: 3.5em;
-    font-weight: bold;
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
-    margin: 10px;
-    padding: 5px;
-}
 
 header{
     background-color: var(--color-background);
@@ -85,7 +77,7 @@ header #header-logo{
 }
 
 header #burger{
-    font-size: 2em;
+    font-size: 2rem;
     color: var(--color-primary);
     margin-right: 10px;
     cursor: pointer;
@@ -107,7 +99,7 @@ header li{
 }
 
 header a{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-primary);
     text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.211);
@@ -121,7 +113,7 @@ main{
     margin: 0px auto;
 }
 
-section{
+main section{
     background-color: var(--color-secondary);
     margin: 10px 10px;
     border-radius: 15px;
@@ -132,22 +124,22 @@ section{
     align-items: center;
 }
 
-section h2{
+main section h2{
     margin-bottom: 5px;
 }
 
-section p{
+main section p{
     text-align: justify;
     margin-bottom: 20px;
 }
 
-section img{
+main section img{
     margin: 0px;
     width: 100%;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-section > div{
+main section > div{
     
     padding: 15px;
     display: flex;
@@ -155,7 +147,7 @@ section > div{
     align-items: center;
 }
 
-section > div > a{
+main section > div > a{
     display: block;
     background-color: var(--color-darker);
     padding: 10px;
@@ -165,12 +157,12 @@ section > div > a{
 
 }
 
-#welcome{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/consultorio.jpeg");
-    /* background: white url("../imgs/consultorio.jpeg") center top no-repeat; */
+main #welcome{
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../imgs/consultorio.jpeg"); */
+    background: white url("../imgs/clinica-peq.jpg") center top no-repeat;
     filter: brightness(80%);
     background-size: cover;
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     margin: 0px;
     border-radius: 0px;
@@ -180,23 +172,37 @@ section > div > a{
     flex-direction: column;
 }
 
-#welcome p{
+main #welcome h1{
+    color: var(--color-primary);
+    font-size: 2.0rem;
+    font-weight: 600;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4);
+    margin: 10px;
+    padding: 5px;
+}
+
+main .welcomeWrapper{
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 12px;
+}
+
+main #welcome p{
     max-width: 300px;
 }
 
-#socials{
+main  #socials{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 0px;
 }
 
-#socials > li{
+main #socials > li{
     margin-bottom: 10px;
 }
 
-#socials > li > a{   
+main #socials > li > a{   
     display: block;
     background-color: var(--color-darker);
     padding: 10px;
@@ -204,7 +210,7 @@ section > div > a{
     color: white;
 }
 
-#adress{
+main #adress{
     width: 100%;
 }
 
